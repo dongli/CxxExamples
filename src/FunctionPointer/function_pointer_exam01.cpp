@@ -37,6 +37,12 @@ void g() {
 }
 
 // -----------------------------------------------------------------------------
+// output:
+//
+//      [Notice]: Set static Foo::i to 5.
+//      [Notice]: Call function 'f' in function template 'g'.
+//      [Notice]: Foo::i = 5.
+//
 int main(int argc, const char *argv[])
 {
     Foo foo(5);

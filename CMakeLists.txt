@@ -4,3 +4,4 @@ project (cxx_examples CXX)
 
 add_subdirectory ("${PROJECT_SOURCE_DIR}/src/FunctionPointer")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/src/MetaProgramming")
+add_subdirectory ("${PROJECT_SOURCE_DIR}/src/Hash")

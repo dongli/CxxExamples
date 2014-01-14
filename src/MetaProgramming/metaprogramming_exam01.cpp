@@ -76,7 +76,12 @@ class Bar2 {
 };
  
 // -----------------------------------------------------------------------------
- 
+// output:
+//
+//      [Notice]: Does 'Bar1' has member function 'g': true.
+//      [Notice]: Does 'Bar2' has member function 'g': false.
+//      [Notice]: Foo<T>::f is called.
+//
 int main(int argc, const char *argv[])
 {
     cout << "[Notice]: Does 'Bar1' has member function 'g': ";
