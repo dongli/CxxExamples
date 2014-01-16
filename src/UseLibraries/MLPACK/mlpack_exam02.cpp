@@ -13,6 +13,22 @@
 using namespace mlpack;
 using namespace std;
 
+// -----------------------------------------------------------------------------
+// output:
+//
+//      Dataset:
+//         1.0000  -1.0000  -1.0000   1.0000
+//         1.0000   1.0000  -1.0000  -1.0000
+//      Neighbor indices:
+//               1         3
+//               0         2
+//               1         3
+//               0         2
+//      Neighbor distances:
+//               2         2
+//               2         2
+//               2         2
+//               2         2
 int main(int argc, char const *argv[])
 {
     // prepare dataset
