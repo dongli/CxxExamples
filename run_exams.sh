@@ -12,6 +12,7 @@ for dir in $(ls src); do
 	echo "========================================================="
 	echo "[Notice]: Enter ./src/${dir}."
 	for exe in $(find ./src/${dir} -name '*.exe'); do
+	    echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 		echo "[Notice]: Run $(basename ${exe})"
 		${exe}
 	done

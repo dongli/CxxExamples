@@ -41,7 +41,7 @@ link_directories (
 
 
 # ------------------------------------------------------------------------------
-set (sources mlpack_exam01.cpp)
+set (sources mlpack_exam01.cpp mlpack_exam02.cpp)
 
 foreach (source ${sources})
     get_filename_component (tmp ${source} NAME_WE)
