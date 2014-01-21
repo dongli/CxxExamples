@@ -2,7 +2,8 @@ cmake_minimum_required (VERSION 2.8)
 
 project (cxx_examples CXX)
 
-add_subdirectory ("${PROJECT_SOURCE_DIR}/src/FunctionPointer")
+add_subdirectory ("${PROJECT_SOURCE_DIR}/src/Pointer/DataPointer")
+add_subdirectory ("${PROJECT_SOURCE_DIR}/src/Pointer/FunctionPointer")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/src/MetaProgramming")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/src/Hash")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/src/Container")

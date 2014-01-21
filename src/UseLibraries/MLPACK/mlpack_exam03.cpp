@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
     dataset.print("Dataset:");
 
     // pre-build the binary space tree for the dataset
-    tree::BinarySpaceTree<bound::HRectBound<2, true>, range::RangeSearchStat> datasetTree(dataset);
+    tree::BinarySpaceTree<bound::HRectBound<2>, range::RangeSearchStat> datasetTree(dataset);
     dataset = datasetTree.Dataset();
     dataset.print("After building tree:");
 
