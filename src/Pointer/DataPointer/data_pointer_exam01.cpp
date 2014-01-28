@@ -44,12 +44,16 @@ void use_boost_any() {
 // -----------------------------------------------------------------------------
 // output:
 //
-//      [Notice]: typeid(void) is Pv.
-//      [Notice]: typeid(void*) is v.
-//      [Notice]: typeid(int) is i.
+//      [Notice]: typeid(<void*>) is Pv.
+//      [Notice]: typeid(*<void*>) is v.
+//      [Notice]: typeid(<int>) is i.
+//      [Notice]: (static_cast<int*>(<void*>) != NULL) is true.
+//      [Notice]: *static_cast<int*>(<void*>) is 1.
+//      [Warning]: *static_cast<double*>(<void*>) is 4.87727e+151.
 //      [Notice]: typeid(boost::any) is N5boost3anyE.
 //      [Notice]: typeid(boost::any) == typeid(int*) is false.
 //      [Notice]: <boost::any>.type() == typeid(int*) is true.
+//      [Notice]: Catch bad cast from int pointer to double pointer!
 //
 int main(int argc, char const *argv[])
 {

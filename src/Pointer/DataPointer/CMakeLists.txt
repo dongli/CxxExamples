@@ -1,5 +1,9 @@
 cmake_minimum_required (VERSION 2.8)
 
+find_package (Boost)
+
+include_directories (${Boost_INCLUDE_DIR})
+
 set (sources data_pointer_exam01.cpp)
 
 foreach (source ${sources})

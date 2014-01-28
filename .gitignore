@@ -15,8 +15,6 @@
 # Compiled executables
 *.exe
 
-# CMake files
-CMakeCache.txt
-CMakeFiles
-Makefile
-cmake_install.cmake
+# Build files
+build
+build.*

@@ -2,6 +2,17 @@ cmake_minimum_required (VERSION 2.8)
 
 # ------------------------------------------------------------------------------
 # external libraries
+if (NOT DEFINED ENV{NLOPT_ROOT})
+    message (FATAL_ERROR
+            "CMake couldn't find library NLopt! "
+            "If it have been installed and you know where it is, "
+            "set NLOPT_ROOT (e.g. in .bashrc) to it."
+    )
+else ()
+    set (NLOPT_INCLUDE_DIR "$ENV{NLOPT_ROOT}/include")
+    set (NLOPT_LIBRARY_DIR "$ENV{NLOPT_ROOT}/lib")
+endif ()
+
 find_package (Armadillo)
 if (NOT ARMADILLO_FOUND)
     if (DEFINED ENV{ARMADILLO_ROOT})
@@ -17,35 +28,21 @@ if (NOT ARMADILLO_FOUND)
     endif ()
 endif ()
 
-find_package (LibXml2)
-
-if (NOT DEFINED ENV{MLPACK_ROOT})
-    message (FATAL_ERROR
-            "CMake couldn't find library MLPACK! "
-            "If it have been installed and you know where it is, "
-            "set MLPACK_ROOT (e.g. in .bashrc) to it."
-    )
-else ()
-    set (MLPACK_INCLUDE_DIR "$ENV{MLPACK_ROOT}/include")
-    set (MLPACK_LIBRARY_DIR "$ENV{MLPACK_ROOT}/lib")
-endif ()
-
 include_directories (
+    ${NLOPT_INCLUDE_DIR}
     ${ARMADILLO_INCLUDE_DIRS}
-    ${LIBXML2_INCLUDE_DIR}
-    ${MLPACK_INCLUDE_DIR}
 )
 link_directories (
-    ${MLPACK_LIBRARY_DIR}
+    ${NLOPT_LIBRARY_DIR}
 )
 
 
 # ------------------------------------------------------------------------------
-set (sources mlpack_exam01.cpp mlpack_exam02.cpp mlpack_exam03.cpp)
+set (sources nlopt_exam01.cpp)
 
 foreach (source ${sources})
     get_filename_component (tmp ${source} NAME_WE)
     set (exam "${tmp}.exe")
 	add_executable (${exam} ${source})
-	target_link_libraries (${exam} ${ARMADILLO_LIBRARY} mlpack)
+	target_link_libraries (${exam} ${ARMADILLO_LIBRARY} nlopt)
 endforeach ()
