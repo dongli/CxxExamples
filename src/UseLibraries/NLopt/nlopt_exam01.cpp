@@ -96,6 +96,7 @@ double nonlinear_ineq_constraint(unsigned int n,  const double *x,
 // -----------------------------------------------------------------------------
 // case
 void run_case(nlopt::opt &a, const Data &data) {
+    evalCounter = 0;
     vector<double> H0(9);
     double obj;
     nlopt::result res;
@@ -161,37 +162,37 @@ void run_case(nlopt::opt &a, const Data &data) {
 //      0.0003   0.0003   0.0003   0.0003
 //      -0.9998  -0.9997  -0.9996  -0.9997
 //      [Notice]: Case 2:
-//      [Notice]: Iteration 14: Objective function value is 4.10061
-//      [Notice]: Iteration 15: Objective function value is 1.8159
-//      [Notice]: Iteration 16: Objective function value is 0.863326
-//      [Notice]: Iteration 17: Objective function value is 0.126213
-//      [Notice]: Iteration 18: Objective function value is 0.876192
-//      [Notice]: Iteration 19: Objective function value is 0.0216174
-//      [Notice]: Iteration 20: Objective function value is 0.0216174
-//      [Notice]: Iteration 21: Objective function value is 0.00309204
-//      [Notice]: Iteration 22: Objective function value is 0.00215742
-//      [Notice]: Iteration 23: Objective function value is 2.34291
-//      [Notice]: Iteration 24: Objective function value is 0.0222922
-//      [Notice]: Iteration 25: Objective function value is 0.0020315
-//      [Notice]: Iteration 26: Objective function value is 0.0020315
-//      [Notice]: Iteration 27: Objective function value is 0.00247789
-//      [Notice]: Iteration 28: Objective function value is 0.0009098
-//      [Notice]: Iteration 29: Objective function value is 0.0009098
-//      [Notice]: Iteration 30: Objective function value is 1.64017
-//      [Notice]: Iteration 31: Objective function value is 0.0159819
-//      [Notice]: Iteration 32: Objective function value is 0.000928478
-//      [Notice]: Iteration 33: Objective function value is 0.000877263
-//      [Notice]: Iteration 34: Objective function value is 0.000877263
-//      [Notice]: Iteration 35: Objective function value is 0.00030082
-//      [Notice]: Iteration 36: Objective function value is 0.000207817
-//      [Notice]: Iteration 37: Objective function value is 7.46385e-05
-//      [Notice]: Iteration 38: Objective function value is 5.43053e-05
-//      [Notice]: Iteration 39: Objective function value is 3.07545e-05
-//      [Notice]: Iteration 40: Objective function value is 1.0732e-05
-//      [Notice]: Iteration 41: Objective function value is 7.05675e-06
-//      [Notice]: Iteration 42: Objective function value is 1.35483e-06
-//      [Notice]: Iteration 43: Objective function value is 4.12899e-07
-//      [Notice]: Objective function is evaluated 43 times.
+//      [Notice]: Iteration 1: Objective function value is 4.10061
+//      [Notice]: Iteration 2: Objective function value is 1.8159
+//      [Notice]: Iteration 3: Objective function value is 0.863326
+//      [Notice]: Iteration 4: Objective function value is 0.126213
+//      [Notice]: Iteration 5: Objective function value is 0.876192
+//      [Notice]: Iteration 6: Objective function value is 0.0216174
+//      [Notice]: Iteration 7: Objective function value is 0.0216174
+//      [Notice]: Iteration 8: Objective function value is 0.00309204
+//      [Notice]: Iteration 9: Objective function value is 0.00215742
+//      [Notice]: Iteration 10: Objective function value is 2.34291
+//      [Notice]: Iteration 11: Objective function value is 0.0222922
+//      [Notice]: Iteration 12: Objective function value is 0.0020315
+//      [Notice]: Iteration 13: Objective function value is 0.0020315
+//      [Notice]: Iteration 14: Objective function value is 0.00247789
+//      [Notice]: Iteration 15: Objective function value is 0.0009098
+//      [Notice]: Iteration 16: Objective function value is 0.0009098
+//      [Notice]: Iteration 17: Objective function value is 1.64017
+//      [Notice]: Iteration 18: Objective function value is 0.0159819
+//      [Notice]: Iteration 19: Objective function value is 0.000928478
+//      [Notice]: Iteration 20: Objective function value is 0.000877263
+//      [Notice]: Iteration 21: Objective function value is 0.000877263
+//      [Notice]: Iteration 22: Objective function value is 0.00030082
+//      [Notice]: Iteration 23: Objective function value is 0.000207817
+//      [Notice]: Iteration 24: Objective function value is 7.46385e-05
+//      [Notice]: Iteration 25: Objective function value is 5.43053e-05
+//      [Notice]: Iteration 26: Objective function value is 3.07545e-05
+//      [Notice]: Iteration 27: Objective function value is 1.0732e-05
+//      [Notice]: Iteration 28: Objective function value is 7.05675e-06
+//      [Notice]: Iteration 29: Objective function value is 1.35483e-06
+//      [Notice]: Iteration 30: Objective function value is 4.12899e-07
+//      [Notice]: Objective function is evaluated 30 times.
 //      [Notice]: Fitted deformation matrix:
 //      -7.3354e-05   3.3419e-04   1.2768e-01
 //      -4.8447e-06  -2.4614e-02   2.3482e-03
@@ -206,47 +207,41 @@ void run_case(nlopt::opt &a, const Data &data) {
 //      0.0123   0.0369   0.0123  -0.0123
 //      -0.0245  -0.0001   0.0245   0.0001
 //      [Notice]: Case 3:
-//      [Notice]: Iteration 44: Objective function value is 4.01
-//      [Notice]: Iteration 45: Objective function value is 1.86778
-//      [Notice]: Iteration 46: Objective function value is 1.29314
-//      [Notice]: Iteration 47: Objective function value is 0.971275
-//      [Notice]: Iteration 48: Objective function value is 0.971275
-//      [Notice]: Iteration 49: Objective function value is 0.375479
-//      [Notice]: Iteration 50: Objective function value is 0.498023
-//      [Notice]: Iteration 51: Objective function value is 0.195969
-//      [Notice]: Iteration 52: Objective function value is 0.195969
-//      [Notice]: Iteration 53: Objective function value is 0.0923087
-//      [Notice]: Iteration 54: Objective function value is 0.0590023
-//      [Notice]: Iteration 55: Objective function value is 0.245301
-//      [Notice]: Iteration 56: Objective function value is 0.0417097
-//      [Notice]: Iteration 57: Objective function value is 0.0417097
-//      [Notice]: Iteration 58: Objective function value is 1.0485
-//      [Notice]: Iteration 59: Objective function value is 0.0270964
-//      [Notice]: Iteration 60: Objective function value is 0.0270964
-//      [Notice]: Iteration 61: Objective function value is 0.00680416
-//      [Notice]: Iteration 62: Objective function value is 0.0185493
-//      [Notice]: Iteration 63: Objective function value is 0.00238037
-//      [Notice]: Iteration 64: Objective function value is 0.00238037
-//      [Notice]: Iteration 65: Objective function value is 0.00102714
-//      [Notice]: Iteration 66: Objective function value is 0.00258825
-//      [Notice]: Iteration 67: Objective function value is 0.000199708
-//      [Notice]: Iteration 68: Objective function value is 0.000199708
-//      [Notice]: Iteration 69: Objective function value is 6.8813e-06
-//      [Notice]: Iteration 70: Objective function value is 6.40882e-07
-//      [Notice]: Objective function is evaluated 70 times.
+//      [Notice]: Iteration 1: Objective function value is 6.015
+//      [Notice]: Iteration 2: Objective function value is 2.80167
+//      [Notice]: Iteration 3: Objective function value is 3.51217
+//      [Notice]: Iteration 4: Objective function value is 2.27779
+//      [Notice]: Iteration 5: Objective function value is 2.27779
+//      [Notice]: Iteration 6: Objective function value is 7.9603
+//      [Notice]: Iteration 7: Objective function value is 2.1447
+//      [Notice]: Iteration 8: Objective function value is 2.1447
+//      [Notice]: Iteration 9: Objective function value is 1.43471
+//      [Notice]: Iteration 10: Objective function value is 0.457294
+//      [Notice]: Iteration 11: Objective function value is 0.143791
+//      [Notice]: Iteration 12: Objective function value is 0.0651756
+//      [Notice]: Iteration 13: Objective function value is 0.041187
+//      [Notice]: Iteration 14: Objective function value is 0.0279177
+//      [Notice]: Iteration 15: Objective function value is 0.0180875
+//      [Notice]: Iteration 16: Objective function value is 0.0100482
+//      [Notice]: Iteration 17: Objective function value is 0.000416233
+//      [Notice]: Iteration 18: Objective function value is 0.000304523
+//      [Notice]: Iteration 19: Objective function value is 1.50529e-05
+//      [Notice]: Iteration 20: Objective function value is 1.50529e-05
+//      [Notice]: Iteration 21: Objective function value is 3.24874e-08
+//      [Notice]: Objective function is evaluated 21 times.
 //      [Notice]: Fitted deformation matrix:
-//      -3.3790e-04  -3.9496e-04   5.9688e-02
-//      4.9809e-02  -3.4408e-05   1.4183e-01
-//      -1.1196e-04   4.9989e-02   3.3013e+00
-//      [Notice]: det(H) = 0.000216003
+//      1.7940e-05   7.0880e-05   5.0008e-02
+//      5.0008e-02   1.7940e-05   7.0880e-05
+//      7.0880e-05   5.0008e-02   1.7940e-05
+//      [Notice]: det(H) = 0.000125062
 //      [Notice]: Actual coordinates:
-//      1.0000   1.0000   1.0000   1.0000
-//      0.9500   1.0000   1.0500   1.0000
-//      0  -0.0500        0   0.0500
+//      1.0000   1.0000   1.0000   1.0000   1.0500   0.9500
+//      0.9500   1.0000   1.0500   1.0000   1.0000   1.0000
+//      0  -0.0500        0   0.0500        0        0
 //      [Notice]: Fitted coordinates:
-//      1.0003   1.0004   0.9997   0.9996
-//      0.9502   1.0000   1.0498   1.0000
-//      0.0001  -0.0500  -0.0001   0.0500
+//      9.9998e-01   9.9993e-01   1.0000e+00   1.0001e+00   1.0500e+00   9.4999e-01
+//      9.4999e-01   9.9998e-01   1.0500e+00   1.0000e+00   1.0001e+00   9.9993e-01
+//      -7.0880e-05  -5.0008e-02   7.0880e-05   5.0008e-02   1.7940e-05  -1.7940e-05
 //
 int main(int argc, char const *argv[])
 {
@@ -281,9 +276,12 @@ int main(int argc, char const *argv[])
     // case 3
     cout << "[Notice]: Case 3:" << endl;
     data.q <<  1.0 <<   1.0 << 0.0 << endr;
-    data.x <<  1.0 <<   1.0 <<  1.0 <<  1.0 << endr
-           << 0.95 <<   1.0 << 1.05 <<  1.0 << endr
-           <<  0.0 << -0.05 <<  0.0 << 0.05 << endr;
+    data.x <<  1.0 <<   1.0 <<  1.0 <<  1.0 <<  1.05 <<  0.95 << endr
+           << 0.95 <<   1.0 << 1.05 <<  1.0 <<   1.0 <<   1.0 << endr
+           <<  0.0 << -0.05 <<  0.0 << 0.05 <<   0.0 <<   0.0 << endr;
+    data.y << -1.0 <<   0.0 <<  1.0 <<  0.0 <<   0.0 <<   0.0 << endr
+           <<  0.0 <<  -1.0 <<  0.0 <<  1.0 <<   0.0 <<   0.0 << endr
+           <<  0.0 <<   0.0 <<  0.0 <<  0.0 <<   1.0 <<  -1.0 << endr;
     run_case(a, data);
     return 0;
 }
