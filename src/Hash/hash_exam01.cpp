@@ -1,5 +1,5 @@
 /**
- *  This example shows the how to extend the std::hash to handle vector<int>
+ *  This example shows how to extend the std::hash to handle vector<int>
  *  type.
  *
  *  History:
