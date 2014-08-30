@@ -51,18 +51,18 @@ public:
     // Member function 'f' is declared only if 'T' has member function 'g'.
     // TODO: Maybe we should also check if 'T' is a class or not.
     // method 1
-    template <typename = typename enable_if<has_g<T>::value>::type>
-    int f() {
-        cout << "[Notice]: Foo<T>::f is called." << endl;
-        return 0;
-    }
- 
-    // method 2
-    // template <typename U = T>
-    // typename enable_if<has_g<U>::value, int>::type f() {
+    // template <typename = typename enable_if<has_g<T>::value>::type>
+    // int f() {
     //     cout << "[Notice]: Foo<T>::f is called." << endl;
     //     return 0;
     // }
+ 
+    // method 2
+    template <typename U = T>
+    typename enable_if<has_g<U>::value, int>::type f() {
+        cout << "[Notice]: Foo<T>::f is called." << endl;
+        return 0;
+    }
 };
  
 // -----------------------------------------------------------------------------
