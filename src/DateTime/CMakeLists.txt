@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 2.8)
 
 find_package (Boost 1.55.0 REQUIRED
-    COMPONENTS date_time locale
+    COMPONENTS date_time
 )
 
 set (sources
