@@ -2,6 +2,8 @@ cmake_minimum_required (VERSION 2.8)
 
 project (cxx_examples CXX)
 
+list (APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}")
+
 add_subdirectory ("${PROJECT_SOURCE_DIR}/src/Pointer/DataPointer")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/src/Pointer/FunctionPointer")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/src/MetaProgramming")
